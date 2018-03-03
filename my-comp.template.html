@@ -9,11 +9,17 @@
 	</div>
 </form>
 <form>
-	<div class="invisible second">
-		<div class="form-row">
+	<div class="form-row invisible second">
       <div class="col-auto">
-        <input type="text" class="form-control" placeholder="name">
+        <input type="text" class="form-control" placeholder="name" ng-model="search">
+        <table class="table">
+        	<tr>
+        		<th>Имя</th>
+        	</tr>
+        	<tr ng-repeat="name in $ctrl.names | filter:search">
+        		<td>{{name.name}}</td>
+        	</tr>
+        </table>
       </div>
     </div>
-	</div>
 </form>
