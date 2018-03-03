@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "start": "node_modules/.bin/static-server C:/Users/66826/repo/angularTask"
+  },
+  "devDependencies": {
+    "static-server": "^3.0.0"
+  }
+}
