@@ -1,0 +1,31 @@
+main{
+	margin:5% 5%;
+}
+.cover-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  opacity: 0.3;
+} 
+.modal-form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1001;
+  display: none;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.modal-form {
+  display: inline-block;
+  padding: 5%;
+  width: 50%;
+  border: 1px solid black;
+  background: white;
+  vertical-align: middle;
+}
