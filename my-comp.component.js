@@ -15,8 +15,18 @@ angular.
       			let input = document.querySelector('.modal-form>input');
       			let container = document.querySelector('.modal-form-container');
 
-		      container.style.display = 'block';
-		      input.focus();
+		      	container.style.display = 'block';
+		      	input.focus();
+		    };
+
+		    this.selectItem = function selectItem(){
+		    	let parentInput = document.querySelector('input[name=parentInput]');
+		    	let tbody = document.querySelector('tbody');
+
+		    	tbody.addEventListener('click', function(event){
+		    		let target = event.target;
+		    		parentInput.value = target.textContent;
+		    	});
 		    };
 
       		this.names = [

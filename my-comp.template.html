@@ -1,7 +1,7 @@
 <form>
 	<div class="form-row">
 	  <div class="col-auto">
-	    <input type="text" class="form-control" placeholder="">
+	    <input type="text" class="form-control" name="parentInput">
 	  </div>
 	  <div class="col-auto">
 	    <button class="btn btn-primary" ng-click="$ctrl.showModal()">кнопка</button>
@@ -17,7 +17,7 @@
 	    		<th>ID</th>
 	    		<th>Имя</th>
 	    	</tr>
-	    	<tr ng-repeat="name in $ctrl.names | filter:search">
+	    	<tr ng-repeat="name in $ctrl.names | filter:search" ng-click="$ctrl.selectItem()">
 	    		<td>{{name.id}}</td>
 	    		<td>{{name.name}}</td>
 	    	</tr>
