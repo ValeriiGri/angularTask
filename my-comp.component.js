@@ -11,15 +11,10 @@ angular.
       			document.body.appendChild(coverDiv);
     		};
 
-		    self.showPrompt = function showPrompt() {
+		    self.showModal = function showModal() {
       			self.showCover();
       			let input = document.querySelector('.modal-form>input');
       			let container = document.querySelector('.modal-form-container');
-
-				function complete(value) {
-					hideCover();
-					container.style.display = 'none';
-				}
 
 		      container.style.display = 'block';
 		      input.focus();
