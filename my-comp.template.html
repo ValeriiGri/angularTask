@@ -14,9 +14,11 @@
       	<input type="text" class="form-control" placeholder="name" ng-model="search">
 	    <table class="table">
 	    	<tr>
+	    		<th>ID</th>
 	    		<th>Имя</th>
 	    	</tr>
 	    	<tr ng-repeat="name in $ctrl.names | filter:search">
+	    		<td>{{name.id}}</td>
 	    		<td>{{name.name}}</td>
 	    	</tr>
 	    </table>

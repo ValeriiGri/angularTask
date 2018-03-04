@@ -3,16 +3,15 @@ angular.
 	component('myComp', {
 		templateUrl:'my-comp.template.html',
       	controller: function MyController(){
-      		var self = this;
 
-      		self.showCover = function showCover() {
+      		this.showCover = function showCover() {
       			let coverDiv = document.createElement('div');
       			coverDiv.classList.add('cover-div');
       			document.body.appendChild(coverDiv);
     		};
 
-		    self.showModal = function showModal() {
-      			self.showCover();
+		    this.showModal = function showModal() {
+      			this.showCover();
       			let input = document.querySelector('.modal-form>input');
       			let container = document.querySelector('.modal-form-container');
 
@@ -20,7 +19,7 @@ angular.
 		      input.focus();
 		    };
 
-      		self.names = [
+      		this.names = [
 
 							{id: 1, name: 'Екатерина'},
 							{id: 2, name: 'Мария'},
