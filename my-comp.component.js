@@ -5,21 +5,11 @@ angular.
       	controller: function MyController(){
       		var self = this;
 
-      		// self.openWin = function openWin(){
-      		// 	let div = document.querySelector('.second');
-      		// 	div.classList.remove('invisible');
-
-      		// };
-
       		self.showCover = function showCover() {
       			let coverDiv = document.createElement('div');
       			coverDiv.classList.add('cover-div');
       			document.body.appendChild(coverDiv);
     		};
-
-    		self.hideCover = function hideCover() {
-		    	document.body.removeChild(document.querySelector('.cover-div'));
-		    };
 
 		    self.showPrompt = function showPrompt() {
       			self.showCover();
@@ -40,9 +30,9 @@ angular.
 							{id: 1, name: 'Екатерина'},
 							{id: 2, name: 'Мария'},
 							{id: 3, name: 'Светлана'},
-							{id: 3, name: 'Михаил'},
-							{id: 3, name: 'Константин'},
-							{id: 3, name: 'Альберт'},
+							{id: 4, name: 'Михаил'},
+							{id: 5, name: 'Константин'},
+							{id: 6, name: 'Альберт'},
 
 
 						];
