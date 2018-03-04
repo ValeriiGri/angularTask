@@ -4,28 +4,34 @@ angular.
 		templateUrl:'my-comp.template.html',
       	controller: function MyController(){
 
+      		this.coverDiv = document.createElement('div');
+      		this.container = document.querySelector('.modal-form-container');
+
       		this.showCover = function showCover() {
-      			let coverDiv = document.createElement('div');
-      			coverDiv.classList.add('cover-div');
-      			document.body.appendChild(coverDiv);
+      			this.coverDiv.classList.add('cover-div');
+      			document.body.append(this.coverDiv);
     		};
 
 		    this.showModal = function showModal() {
       			this.showCover();
-      			let input = document.querySelector('.modal-form>input');
-      			let container = document.querySelector('.modal-form-container');
 
-		      	container.style.display = 'block';
+      			let input = document.querySelector('.modal-form>input');
+
+		      	this.container.style.display = 'block';
 		      	input.focus();
 		    };
 
 		    this.selectItem = function selectItem(){
 		    	let parentInput = document.querySelector('input[name=parentInput]');
 		    	let tbody = document.querySelector('tbody');
+		    	let self = this;
 
 		    	tbody.addEventListener('click', function(event){
 		    		let target = event.target;
+
 		    		parentInput.value = target.textContent;
+		    		self.container.style.display = 'none';
+		    		document.body.removeChild(self.coverDiv);
 		    	});
 		    };
 
