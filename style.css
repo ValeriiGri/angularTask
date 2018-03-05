@@ -22,9 +22,13 @@ main{
   text-align: center;
 }
 .modal-form {
-  display: inline-block;
+  display: inline-block; 
   padding: 5%;
   width: 50%;
   background: white;
   vertical-align: middle;
+}
+
+.table>tbody>tr>td:last-child{
+	cursor: pointer;
 }
