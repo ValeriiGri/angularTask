@@ -3,6 +3,7 @@
     "start": "node_modules/.bin/static-server C:/Users/66826/repo/angularTask"
   },
   "devDependencies": {
+    "eslint-config-google": "^0.9.1",
     "static-server": "^3.0.0"
   }
 }

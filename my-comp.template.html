@@ -1,7 +1,7 @@
 <form>
 	<div class="form-row">
 	  <div class="col-auto">
-	    <input type="text" class="form-control" name="parentInput" placeholder="нажми кнопку">
+	    <input type="text" class="form-control" value={{nameSelected}} name={{nameId}} placeholder="нажми кнопку">
 	  </div>
 	  <div class="col-auto">
 	    <button class="btn btn-primary" ng-click="$ctrl.showModal()">кнопка</button>
@@ -9,18 +9,21 @@
 	</div>
 </form>
 
-<div class="modal-form-container">
+
+<div ng-hide="hide" class="modal-form-container">
     <form class="modal-form">
-      	<input type="text" class="form-control" placeholder="name" ng-model="search">
+      	<input type="text" class="form-control" autofocus="" placeholder="name" ng-model="search" >
 	    <table class="table">
 	    	<tr>
 	    		<th>ID</th>
 	    		<th>Имя</th>
 	    	</tr>
-	    	<tr ng-repeat="name in $ctrl.names | filter:search" ng-click="$ctrl.selectItem()">
+	    	<tr ng-repeat="name in $ctrl.names | filter:search">
 	    		<td>{{name.id}}</td>
-	    		<td>{{name.name}}</td>
+	    		<td ng-click="$ctrl.selectItem(name)">{{name.name}}</td>
 	    	</tr>
 	    </table>
     </form>
- </div>
+</div>
+
+<div ng-hide="hide" class="cover-div"></div>
